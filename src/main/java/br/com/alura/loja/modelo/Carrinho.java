@@ -50,6 +50,8 @@ public class Carrinho {
 	}
 	
 	public void remove(long id) {
+		//Iterator é uma lista, que com o comando .hasNext() vc verificar se tem um próximo, que
+		// é bem útil, a documentação explica bem -> https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 		for (Iterator iterator = produtos.iterator(); iterator.hasNext();) {
 			Produto produto = (Produto) iterator.next();
 			if(produto.getId() == id) {
